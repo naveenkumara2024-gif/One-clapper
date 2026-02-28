@@ -1,0 +1,11 @@
+export { default as authRoutes } from './auth.js';
+export { default as projectRoutes } from './projects.js';
+export { default as scriptRoutes } from './scripts.js';
+export { default as sceneRoutes } from './scenes.js';
+export { default as scheduleRoutes } from './schedules.js';
+export { default as taskRoutes } from './tasks.js';
+export { default as crewRoutes } from './crew.js';
+export { default as readinessRoutes } from './readiness.js';
+export { default as notificationRoutes } from './notifications.js';
+export { default as reportRoutes } from './reports.js';
+export { default as locationRoutes } from './locations.js';
