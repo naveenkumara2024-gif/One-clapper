@@ -4,7 +4,6 @@ import { useProject, useWebSocket } from '../context';
 import { Shield, AlertCircle, CheckCircle, Clock, XCircle } from 'lucide-react';
 import toast from 'react-hot-toast';
 
-const departments = ['direction', 'camera', 'lighting', 'sound', 'art', 'costume', 'makeup', 'production', 'transport', 'catering', 'stunts', 'vfx'];
 const statusColors = { ready: 'bg-green-500', in_progress: 'bg-yellow-500', not_started: 'bg-gray-500', blocked: 'bg-red-500' };
 const statusIcons = { ready: CheckCircle, in_progress: Clock, not_started: XCircle, blocked: AlertCircle };
 

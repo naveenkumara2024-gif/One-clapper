@@ -8,7 +8,7 @@ import {
 } from 'lucide-react';
 
 const navItems = [
-  { to: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
+  { to: '/', label: 'Dashboard', icon: LayoutDashboard },
   { to: '/projects', label: 'Projects', icon: Film },
   { to: '/scripts', label: 'Scripts', icon: FileText },
   { to: '/scenes', label: 'Scenes', icon: Clapperboard },
@@ -73,6 +73,7 @@ export default function Layout() {
             <NavLink
               key={to}
               to={to}
+              end={to === '/'}
               onClick={() => setSidebarOpen(false)}
               className={({ isActive }) => isActive ? 'sidebar-link-active' : 'sidebar-link'}
             >

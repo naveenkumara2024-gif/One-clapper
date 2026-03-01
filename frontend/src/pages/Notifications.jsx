@@ -16,13 +16,13 @@ export default function Notifications() {
   useEffect(() => { load(); }, []);
 
   useEffect(() => {
-    const unsub = subscribe('NEW_NOTIFICATION', () => load());
+    const unsub = subscribe('NOTIFICATION', () => load());
     return unsub;
   }, []);
 
   const load = async () => {
     try {
-      const res = await notificationAPI.getMine();
+      const res = await notificationAPI.getMy();
       setNotifications(res.data.data || []);
     } catch { toast.error('Failed to load notifications'); }
     finally { setLoading(false); }

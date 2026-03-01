@@ -5,7 +5,7 @@ import { Plus, Check, Film, Users } from 'lucide-react';
 import toast from 'react-hot-toast';
 
 export default function Projects() {
-  const { user, hasRole } = useAuth();
+  const { hasRole } = useAuth();
   const { currentProject, selectProject } = useProject();
   const [projects, setProjects] = useState([]);
   const [showForm, setShowForm] = useState(false);
@@ -18,7 +18,7 @@ export default function Projects() {
     try {
       const res = await projectAPI.getAll();
       setProjects(res.data.data);
-    } catch (err) {
+    } catch {
       toast.error('Failed to load projects');
     } finally {
       setLoading(false);

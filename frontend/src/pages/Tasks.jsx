@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { taskAPI } from '../api';
-import { useProject, useAuth } from '../context';
+import { useProject } from '../context';
 import { ClipboardList, AlertCircle, Filter } from 'lucide-react';
 import toast from 'react-hot-toast';
 
@@ -11,7 +11,6 @@ const priorityColors = { 1: 'badge-neutral', 2: 'badge-info', 3: 'badge-warning'
 
 export default function Tasks() {
   const { currentProject } = useProject();
-  const { user, hasRole } = useAuth();
   const [tasks, setTasks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [filterDept, setFilterDept] = useState('all');

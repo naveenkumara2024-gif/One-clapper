@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { crewAPI } from '../api';
-import { useProject, useAuth } from '../context';
+import { useProject } from '../context';
 import { Users, AlertCircle, UserCheck, UserX } from 'lucide-react';
 import toast from 'react-hot-toast';
 
@@ -8,7 +8,6 @@ const departments = ['direction', 'camera', 'lighting', 'sound', 'art', 'costume
 
 export default function Crew() {
   const { currentProject } = useProject();
-  const { hasRole } = useAuth();
   const [crew, setCrew] = useState({ all: [], permanent: [], temporary: [], total: 0 });
   const [loading, setLoading] = useState(true);
   const [filterDept, setFilterDept] = useState('all');

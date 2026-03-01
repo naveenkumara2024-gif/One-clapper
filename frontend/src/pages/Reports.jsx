@@ -20,7 +20,7 @@ export default function Reports() {
 
   const load = async () => {
     try {
-      const [r, s] = await Promise.all([reportAPI.getByProject(currentProject.id), reportAPI.summary(currentProject.id)]);
+      const [r, s] = await Promise.all([reportAPI.getByProject(currentProject.id), reportAPI.getSummary(currentProject.id)]);
       setReports(r.data.data || []);
       setSummary(s.data.data || null);
     } catch { toast.error('Failed to load reports'); }
